@@ -5,15 +5,10 @@ import "package:magical_change/screens/start_screen.dart";
 void main(){
 
   runApp(
-      const MaterialApp(
-      
-      debugShowCheckedModeBanner: false,
+       const MaterialApp(
+
       home: StartScreen(),
-      // theme: ThemeData(
-      //   textTheme: GoogleFonts.openSansTextTheme(
-      //     Theme.of(context).textTheme,
-      //   ),
-      // ),
+
      )
   );
 }

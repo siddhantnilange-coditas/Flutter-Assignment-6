@@ -45,7 +45,7 @@ class _UserItemState extends State<UserItem> {
         child: Card(
           
           elevation: 4,
-          color: const Color.fromARGB(255, 255, 255, 255),
+          color: const Color.fromARGB(255, 249, 244, 244),
           child: Row(
             children: [
               Column(
