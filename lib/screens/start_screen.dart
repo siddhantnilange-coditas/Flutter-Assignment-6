@@ -48,7 +48,6 @@ class UserProvider with ChangeNotifier {
       phoneNumber: '3323434343',
       avatar: 'assets/images/person.jpeg',
     ),
-    // Add more sample users here
   ];
   List<User> get users => _users;
 
@@ -73,7 +72,6 @@ class UserProvider with ChangeNotifier {
 class StartScreen extends StatelessWidget {
   const StartScreen({super.key});
 
-  // const StartScreen({super.key});
   @override
   Widget build(BuildContext context) {
     return Scaffold(
