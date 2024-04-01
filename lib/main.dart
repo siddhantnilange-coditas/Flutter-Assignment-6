@@ -1,16 +1,19 @@
-import "package:flutter/material.dart";
 import "package:magical_change/screens/start_screen.dart";
-import "package:provider/provider.dart";
+import "package:flutter/material.dart";
+import "package:flutter_riverpod/flutter_riverpod.dart";
+
+
 
 void main() {
   runApp(
-    ChangeNotifierProvider(
-      create: (context) => UserProvider(),
+    const ProviderScope(
       child: MaterialApp(
+        debugShowCheckedModeBanner: false,
         home: StartScreen(),
       ),
     ),
   );
 }
+
 
 
