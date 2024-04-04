@@ -15,7 +15,7 @@ class UserProvider extends StateNotifier<List<User>> {
       email: 'sumit@sumit.com',
       phoneNumber: '4565465656',
       avatar: 'assets/images/person.jpeg',
-    ),
+    ),     
     User(
       address: 'Parbhani',
       name: 'Siddhant',
@@ -54,18 +54,21 @@ class UserProvider extends StateNotifier<List<User>> {
         ]);
 
 
-  void updateUser(User newUser, int index) {
+  void updateUser(User newUser, int index, WidgetRef ref) {
     if(index>=0 && index<state.length){
           state[index] = newUser;
+          ref.read(userRiverpod.notifier).state = List.from(state);
     }
     else{
-      addUser(newUser);
+      addUser(newUser, ref);
     }
 
   }
 
-  void addUser(newUser) {
+  void addUser(User newUser,  WidgetRef ref) {
     state.add(newUser);
+    ref.read(userRiverpod.notifier).state = List.from(state);
+
   }
 }
 

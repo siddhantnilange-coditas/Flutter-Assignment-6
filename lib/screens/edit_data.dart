@@ -254,7 +254,7 @@ class _EditUsersScreenState extends ConsumerState<EditUsersScreen> {
 
                           ref
                               .read(userRiverpod.notifier)
-                              .updateUser(newUser, widget.index);
+                              .updateUser(newUser, widget.index, ref);
                           print("crossed update user****");
                        
                           Navigator.pop(context);

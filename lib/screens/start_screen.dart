@@ -59,11 +59,11 @@ class StartScreen extends ConsumerWidget {
           ).then((newUser) {
             // context.read(userProvider).addUser(newUser);
             // context.read(userRiverpod.notifier).addUser(newUser);
-            ref.read(userRiverpod.notifier).addUser(newUser);
+            ref.read(userRiverpod.notifier).addUser(newUser, ref);
           });
         },
         icon: const Icon(Icons.add),
-        label: const Text('Add'),
+        label: const Text('Add '),
         backgroundColor: const Color.fromARGB(255, 97, 201, 101),
       ),
 
