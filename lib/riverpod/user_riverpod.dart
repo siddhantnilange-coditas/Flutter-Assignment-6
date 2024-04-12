@@ -9,7 +9,7 @@ final userRiverpod =
 class UserProvider extends StateNotifier<List<User>> {
   UserProvider()
       : super([
-          User(
+    User(
       address: 'Pune',
       name: 'Sumit Ambhore',
       email: 'sumit@sumit.com',
@@ -18,7 +18,7 @@ class UserProvider extends StateNotifier<List<User>> {
     ),     
     User(
       address: 'Parbhani',
-      name: 'Siddhant',
+      name: 'Siddhant Nilange',
       email: 'Sidd@sidd.com',
       phoneNumber: '983459998',
       avatar: 'assets/images/person.jpeg',
@@ -51,7 +51,8 @@ class UserProvider extends StateNotifier<List<User>> {
       phoneNumber: '3323434343',
       avatar: 'assets/images/person.jpeg',
     ),
-        ]);
+  ]
+);
 
 
   void updateUser(User newUser, int index, WidgetRef ref) {
