@@ -1,8 +1,12 @@
 
-import 'package:magical_change/riverpod/user_riverpod.dart';
+import 'dart:js_interop';
+
 import 'package:flutter/material.dart';
-import 'package:magical_change/models/user_info.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:magical_change/data/models/user_info.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:magical_change/presentation/screens/homePage/bloc/user_bloc.dart';
+import 'package:magical_change/presentation/screens/homePage/bloc/user_event.dart';
 // import 'package:assignment_6/screens/start_screen.dart';
 
 class EditUsersScreen extends ConsumerStatefulWidget {
@@ -252,9 +256,8 @@ class _EditUsersScreenState extends ConsumerState<EditUsersScreen> {
                             avatar: widget.user.avatar,
                           );
 
-                          ref
-                              .read(userRiverpod.notifier)
-                              .updateUser(newUser, widget.index, ref);
+  BlocProvider.of<UserBloc>(context).add(AddNewUserClickedEvent(newUser: newUser));
+                        
                           print("crossed update user****");
                        
                           Navigator.pop(context);
